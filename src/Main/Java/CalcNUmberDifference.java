@@ -57,7 +57,7 @@ public class CalcNUmberDifference {
 		}
 		
 		switch(group) {
-			case 1: message = message + "Small Difference"; 
+			case 1: message = message + "Small Difference"; break;
 			case 2: message = message + "Medium Difference"; break;
 			case 3: message = message + "Large Differece"; break;
                         // Bug Fix !! - Bima Putra

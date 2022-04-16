@@ -173,7 +173,7 @@ public class NumberDifferenceTest {
             ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 8));
             
             // Expected Result
-            String expectedMessage = "Difference : 5\nGroup 1, Small DifferenceMedium Difference";
+            String expectedMessage = "Difference : 5\nGroup 1, Small Difference";
             Integer expectedDifference = 5;
             
             // Exercise Test
@@ -197,7 +197,7 @@ public class NumberDifferenceTest {
             ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 3, 8));
             
             // Expected Result
-            String expectedMessage = "Difference : 7\nGroup 1, Small DifferenceMedium Difference";
+            String expectedMessage = "Difference : 7\nGroup 1, Small Difference";
             Integer expectedDifference = 7;
             
             // Exercise Test
@@ -221,7 +221,7 @@ public class NumberDifferenceTest {
             ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 3, 8, 8, 8, 8, 8, 8, 8, 8));
             
             // Expected Result
-            String expectedMessage = "Difference : 7\nGroup 1, Small DifferenceMedium Difference";
+            String expectedMessage = "Difference : 7\nGroup 1, Small Difference";
             Integer expectedDifference = 7;
             
             // Exercise Test

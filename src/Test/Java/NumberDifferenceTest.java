@@ -137,6 +137,125 @@ public class NumberDifferenceTest {
         
         /* TC 6 - 10 */
         
+        // TC 6 : Non group, There’s no difference ( 9 loop )
+        // PJ : Sabar Muhamad Itikap
+	@Test
+	public void testNonGroupNoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 38 38 38 38 38 38 38 38 38 38
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(38, 38, 38, 38, 38, 38, 38, 38, 38, 38));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 7 : Group 1, Small difference ( 1 loop )
+        // PJ : Sabar Muhamad Itikap
+	@Test
+	public void testGroup1NoDiff1Loop() {
+            /*
+                Data Uji
+                N = 2
+                Number = 3 8
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 8));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 5\nGroup 1, Small DifferenceMedium Difference";
+            Integer expectedDifference = 5;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 8 : Group 1, Small difference ( 2 loop )
+        // PJ : Sabar Muhamad Itikap
+	@Test
+	public void testGroup1NoDiff2Loop() {
+            /*
+                Data Uji
+                N = 3
+                Number = 1 3 8
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 3, 8));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 7\nGroup 1, Small DifferenceMedium Difference";
+            Integer expectedDifference = 7;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 9 : Group 1, Small difference ( 9 loop )
+        // PJ : Sabar Muhamad Itikap
+	@Test
+	public void testGroup1NoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 1 3 8 8 8 8 8 8 8 8
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1, 3, 8, 8, 8, 8, 8, 8, 8, 8));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 7\nGroup 1, Small DifferenceMedium Difference";
+            Integer expectedDifference = 7;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 10 : Group 2, Medium difference ( 1 loop )
+        // PJ : Sabar Muhamad Itikap
+	@Test
+	public void testGroup2NoDiff1Loop() {
+            /*
+                Data Uji
+                N = 2
+                Number = 3 38
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 38));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 35\nGroup 2, Medium Difference";
+            Integer expectedDifference = 35;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
         
         /* TC 11 - 15 */
 }

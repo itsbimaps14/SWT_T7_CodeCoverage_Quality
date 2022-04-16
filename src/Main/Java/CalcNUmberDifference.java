@@ -47,14 +47,26 @@ public class CalcNUmberDifference {
 		if(group>0){
 			message = message + "\nGroup " + group + ", ";
 		}else{
-			message = message + "\nNon Group ";
+                        // Bug Fix !! - Bima Putra
+                        // Before : message = message + "\nNon Group ";
+                        // After : message = message + "\nNon Group, ";
+                        /* Keterangan :
+                            Message tidak sesuai dengan requirement.
+                        */
+			message = message + "\nNon Group, ";
 		}
 		
 		switch(group) {
 			case 1: message = message + "Small Difference"; 
 			case 2: message = message + "Medium Difference"; break;
 			case 3: message = message + "Large Differece"; break;
-			case 4: message = message + "There's no difference"; break;
+                        // Bug Fix !! - Bima Putra
+                        // Before : case = 4
+                        // After : case = 0
+                        /* Keterangan :
+                            Kondisi ketika difference < 1 case 0
+                        */
+			case 0: message = message + "There's no difference"; break;
 		}
 		
 		return message;
@@ -64,6 +76,7 @@ public class CalcNUmberDifference {
 	// mengembalikan true, jika nilai N sesuai dengan range
 	// // sebaliknya mengembalikan false
 	public boolean validateRangeInputMaxDeret(int nBil) {
+                // Bug Fix !! - Bima Putra
                 // Before : if(nBil>=1 || nBil<=10)
                 // After : if(nBil>=1 && nBil<=10)
                 /* Keterangan :

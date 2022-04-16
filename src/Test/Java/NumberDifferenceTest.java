@@ -2,6 +2,9 @@ package Test.Java;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -58,6 +61,79 @@ public class NumberDifferenceTest {
 		// (3) verify (assert, check)
 		assertEquals(expected, actual);
 	}
+        
+        // TC 3 : Non group, There’s no difference ( 0 loop )
+        // PJ : Bima Putra S
+	@Test
+	public void testNonGroupNoDiff0Loop() {
+            /*
+                Data Uji
+                N = 1
+                Number = 38
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(38));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 4 : Non group, There’s no difference ( 1 loop )
+        // PJ : Bima Putra S
+	@Test
+	public void testNonGroupNoDiff1Loop() {
+            /*
+                Data Uji
+                N = 2
+                Number = 38 38
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(38, 38));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 5 : Non group, There’s no difference ( 2 loop )
+        // PJ : Bima Putra S
+	@Test
+	public void testNonGroupNoDiff2Loop() {
+            /*
+                Data Uji
+                N = 3
+                Number = 38 38 38
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(38, 38, 38));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 0\nNon Group, There's no difference";
+            Integer expectedDifference = 0;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
         
         /* TC 6 - 10 */
         

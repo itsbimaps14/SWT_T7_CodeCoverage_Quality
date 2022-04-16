@@ -65,7 +65,13 @@ public class CalcNUmberDifference {
                         */
 			case 1: message = message + "Small Difference"; break;
 			case 2: message = message + "Medium Difference"; break;
-			case 3: message = message + "Large Differece"; break;
+                        // Bug Fix !! - Bima Putra & Sabar M Itikap
+                        // Before : case 1: message = message + "Small Difference";
+                        // After : case 1: message = message + "Small Difference"; break;
+                        /* Keterangan :
+                            Terdapat kesalahan output, kurang huruf "n"
+                        */
+			case 3: message = message + "Large Difference"; break;
                         // Bug Fix !! - Bima Putra
                         // Before : case = 4
                         // After : case = 0

@@ -257,5 +257,54 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
         
+        
         /* TC 11 - 15 */
+        
+        // TC 14 : Group 3, Large difference ( 2 loop )
+        // PJ : Fachri Dhia Fauzan & Sabar Muhamad Itikap
+        @Test
+        public void testGroup3NoDiff2Loop() {
+            /*
+                Data Uji
+                N = 3
+                Number = 3 60 3
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
+            Integer expectedDifference = 57;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+        }
+
+        // TC 15 : Group 3, Large difference ( 9 loop )
+        // PJ : Fachri Dhia Fauzan & Sabar Muhamad Itikap
+        @Test
+        public void testGroup3NoDiff9Loop() {
+            /*
+                Data Uji
+                N = 10
+                Number = 3 60 3 3 3 3 3 3 3 3
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3, 3, 3, 3, 3, 3, 3, 3));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
+            Integer expectedDifference = 57;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+        }
 }

@@ -2,5 +2,5 @@ projectKey=NumberDiff
 serverUrl=http://localhost:9000
 serverVersion=9.4.0.54424
 dashboardUrl=http://localhost:9000/dashboard?id=NumberDiff
-ceTaskId=AYAxJvVeMg6S6crOQatZ
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYAxJvVeMg6S6crOQatZ
+ceTaskId=AYAxyL0CMg6S6crOQavC
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYAxyL0CMg6S6crOQavC

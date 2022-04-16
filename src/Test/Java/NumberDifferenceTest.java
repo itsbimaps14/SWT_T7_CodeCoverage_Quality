@@ -134,7 +134,6 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
         
-        
         /* TC 6 - 10 */
         
         // TC 6 : Non group, There’s no difference ( 9 loop )
@@ -260,20 +259,20 @@ public class NumberDifferenceTest {
         
         /* TC 11 - 15 */
         
-        // TC 14 : Group 3, Large difference ( 2 loop )
-        // PJ : Fachri Dhia Fauzan & Sabar Muhamad Itikap
-        @Test
-        public void testGroup3NoDiff2Loop() {
+        // TC 11 : Group 2, Medium Difference ( 2 loop )
+        // PJ : Bima Putra S & Fachri Dhia Fauzan
+	@Test
+	public void testGroup2MedDiff2Loop() {
             /*
                 Data Uji
                 N = 3
-                Number = 3 60 3
+                Number = 3 38 3
             */
-            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3));
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 38, 3));
             
             // Expected Result
-            String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
-            Integer expectedDifference = 57;
+            String expectedMessage = "Difference : 35\nGroup 2, Medium Difference";
+            Integer expectedDifference = 35;
             
             // Exercise Test
             Integer actualDifference = sut.numberDiffirenceProcess(testData);
@@ -283,17 +282,41 @@ public class NumberDifferenceTest {
             assertEquals(expectedDifference, actualDifference);
             assertEquals(expectedMessage, actualMessage);
         }
-
-        // TC 15 : Group 3, Large difference ( 9 loop )
-        // PJ : Fachri Dhia Fauzan & Sabar Muhamad Itikap
-        @Test
-        public void testGroup3NoDiff9Loop() {
+        
+        // TC 12 : Group 2, Medium Difference ( 9 loop )
+        // PJ : Bima Putra S & Fachri Dhia Fauzan
+	@Test
+	public void testGroup2MedDiff9Loop() {
             /*
                 Data Uji
                 N = 10
-                Number = 3 60 3 3 3 3 3 3 3 3
+                Number = 3 38 3 3 3 3 3 3 3 3
             */
-            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3, 3, 3, 3, 3, 3, 3, 3));
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 38, 3, 3, 3, 3, 3, 3, 3, 3));
+            
+            // Expected Result
+            String expectedMessage = "Difference : 35\nGroup 2, Medium Difference";
+            Integer expectedDifference = 35;
+            
+            // Exercise Test
+            Integer actualDifference = sut.numberDiffirenceProcess(testData);
+            String actualMessage = sut.groupingDifference(actualDifference);
+            
+            // Verify Test
+            assertEquals(expectedDifference, actualDifference);
+            assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 13 : Group 3, Large Difference ( 1 loop )
+        // PJ : Bima Putra S & Fachri Dhia Fauzan
+	@Test
+	public void testGroup3LarDiff1Loop() {
+            /*
+                Data Uji
+                N = 2
+                Number = 3 60
+            */
+            ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60));
             
             // Expected Result
             String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
@@ -306,5 +329,53 @@ public class NumberDifferenceTest {
             // Verify Test
             assertEquals(expectedDifference, actualDifference);
             assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 14 : Group 3, Large difference ( 2 loop )
+        // PJ : Fachri Dhia Fauzan & Sabar M Irikaf
+        @Test
+        public void testGroup3NoDiff2Loop() {
+                /*
+                    Data Uji
+                    N = 3
+                    Number = 3 60 3
+                */
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3));
+
+                // Expected Result
+                String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
+                Integer expectedDifference = 57;
+
+                // Exercise Test
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+
+                // Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+        }
+
+        // TC 15 : Group 3, Large difference ( 9 loop )
+        // PJ : Fachri Dhia Fauzan & Sabar M Itikag
+        @Test
+        public void testGroup3NoDiff9Loop() {
+                /*
+                    Data Uji
+                    N = 10
+                    Number = 3 60 3 3 3 3 3 3 3 3
+                */
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(3, 60, 3, 3, 3, 3, 3, 3, 3, 3));
+
+                // Expected Result
+                String expectedMessage = "Difference : 57\nGroup 3, Large Difference";
+                Integer expectedDifference = 57;
+
+                // Exercise Test
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+
+                // Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
         }
 }

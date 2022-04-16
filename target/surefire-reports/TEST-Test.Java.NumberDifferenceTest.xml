@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="Test.Java.NumberDifferenceTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="Test.Java.NumberDifferenceTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="16.0.1+9-24"/>
@@ -63,6 +63,19 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Test.Java.NumberDifferenceTest" name="testInputNBilDalamRange_01" time="0.006"/>
-  <testcase classname="Test.Java.NumberDifferenceTest" name="testInputNBilLuarRange_01" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="nBilInvalidUpperBoundaries" time="0.007"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testNonGroupNoDiff0Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testNonGroupNoDiff1Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testNonGroupNoDiff2Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testNonGroupNoDiff9Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup3LarDiff1Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="nBilInvalidLowerBoundaries" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup2MedDiff2Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup2MedDiff9Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup1NoDiff1Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup1NoDiff2Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup1NoDiff9Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup2NoDiff1Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup3NoDiff2Loop" time="0"/>
+  <testcase classname="Test.Java.NumberDifferenceTest" name="testGroup3NoDiff9Loop" time="0"/>
 </testsuite>

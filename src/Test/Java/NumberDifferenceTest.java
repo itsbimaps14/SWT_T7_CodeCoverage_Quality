@@ -25,12 +25,14 @@ public class NumberDifferenceTest {
         
         /* TC 1 - 5 */
         
+        // TC 1 : Range nBil tidak valid pada batas bawah
+        // PJ : Bima Putra S
 	@Test
-	public void testInputNBilLuarRange_01() {
-		// (1) setup (arrange, build)
+	public void nBilInvalidLowerBoundaries() {
 		int jumlahDeretBil;
 		boolean actual, expected;
-		jumlahDeretBil = 15; // bukan berada pada range 1-10
+                // Test Data = 0
+		jumlahDeretBil = 0;
 		expected = false;
 		
 		// (2) exercise (act, operate)
@@ -39,14 +41,16 @@ public class NumberDifferenceTest {
 		// (3) verify (assert, check)
 		assertEquals(expected, actual);
 	}
-	
+        
+	// TC 2 : Range nBil tidak valid pada batas atas
+        // PJ : Bima Putra S
 	@Test
-	public void testInputNBilDalamRange_01() {
-		// (1) setup (arrange, build)
+	public void nBilInvalidUpperBoundaries() {
 		int jumlahDeretBil;
 		boolean actual, expected;
-		jumlahDeretBil = 5; // berada pada range 1-10
-		expected = true;
+                // Test Data = 11
+		jumlahDeretBil = 11;
+		expected = false;
 		
 		// (2) exercise (act, operate)
 		actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);
